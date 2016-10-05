@@ -3,5 +3,8 @@ class UsersController < ApplicationController
     @users = User.all
     @users_count = User.count
   end
+  def new
+    
+  end
 
 end
