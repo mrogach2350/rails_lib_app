@@ -1,4 +1,9 @@
 <h1>Login!</h1>
+<% if flash[:login_error] %>
+<p>
+  <%= flash[:login_error] %>
+</p>
+<% end %>
 <%= form_for @user, url: "/sessions", method: "post" do |f|%>
   <%= f.email_field :email, placeholder: "Email" %>
   <%= f.password_field :password, placeholder: "Password" %>
