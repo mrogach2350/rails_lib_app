@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   end
   def create
     @user = User.create(user_params)
-    redirect_to root_path
+    login(@user)
+    redirect_to @user
   end
   def show
     @user = User.find_by_id(params[:id])
