@@ -1,5 +1,12 @@
 <h1>Welcome to Users Index.</h1>
-
+<div>
+  <h2>User List</h2>
+  <% @users.each do |user| %>
+  <ul>
+    <li><%= user.first_name + " " + user.last_name %></li>
+  </ul>
+  <% end %>
+</div>
 <div>
 There are currently <%= @users_count %> user(s) signed up!
 </div>
